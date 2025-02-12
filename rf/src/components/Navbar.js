@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <nav>
-      <ul>
+      <div style={{ float: 'left' }}>Riyoga Nursing School</div>
+      <ul style={{ marginLeft: '50px' }}>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/projects">Projects</Link></li>
         <li><Link to="/courses">Courses</Link></li>
