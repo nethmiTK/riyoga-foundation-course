@@ -1,13 +1,156 @@
 body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333; /* Set a default text color */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Navbar styling */
+nav {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
+
+/* Navbar links container */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+/* Navbar list items */
+nav ul li {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Navbar link styling */
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect on links */
+nav ul li a:hover {
+  background-color: rgba(255, 215, 0, 0.8);
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+    padding: 14px 25px;
+  }
+}
+
+/* Adding smooth transition for navbar when scrolling */
+nav.scrolled {
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for the content header */
+header {
+  margin-top: 80px;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 10px; /* Rounded corners */
+}
+
+header h1 {
+  font-size: 3.5rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+header h2 {
+  font-size: 1.6rem;
+  color: #555;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.2);
+}
+
+footer a {
+  text-decoration: none;
+  color: #ffcc00;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffdd33;
+}
+
+/* Content Section Styling */
+.container {
+  padding: 30px;
+}
+
+.project-box {
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Adding shadow for a floating effect */
+  transition: all 0.3s ease;
+}
+
+.project-box:hover {
+  transform: translateY(-5px); /* Hover effect to lift the box */
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-box h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.project-box p {
+  color: #777;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
