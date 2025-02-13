@@ -3,12 +3,11 @@ import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 function Header() {
   return (
-    <header className="bg-blue-600 text-white py-6 shadow-lg flex justify-between items-center px-8">
+    <header className="title">
       {/* Left Section - Title */}
       <div className="text-left">
-        <h1 className="text-3xl font-bold">Welcome to the Riyoga Foundation</h1>
-        <p className="text-lg mt-2">Empowering Knowledge, Inspiring Action</p>
-      </div>
+        <h1 className="title">Welcome to the Riyoga Foundation</h1>
+       </div>
 
       {/* Center Section - Social Media */}
       <div className="text-center">
@@ -34,9 +33,7 @@ function Header() {
       </div>
 
       {/* Right Section - Riyoga Foundation Course */}
-      <div className="text-right">
-        <p className="text-xl font-semibold">Riyoga Foundation Course</p>
-      </div>
+       
     </header>
   );
 }

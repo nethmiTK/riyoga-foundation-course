@@ -1,31 +1,17 @@
- /* Global Styles */
-
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #ECF0F1; /* Soft White/Light Gray Background */
-  color: #333; /* Default text color */
-}
-/* Reduce Navbar Height */
 nav {
-  padding: 10px 0; /* Reduce padding */
-  height: 6px; /* Set a fixed height */
-}
-
-/* Navbar Container */
-nav {
+  padding: 22px 0;
+  height: 1px; /* Adjusted height for better navbar appearance */
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #2C3E50, #1ABC9C); /* Modern Gradient */
-  padding: 15px 0;
+  background: #2C3E50; /* Deep Blue (Primary Color) */
   position: fixed;
   width: 100%;
-  top: 0;
+   top: 0;
   z-index: 100;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Navbar Links */
@@ -57,326 +43,196 @@ nav {
 
 /* Hover Effect */
 .nav-links li a:hover {
-  background-color: rgba(255, 215, 0, 0.8);
+  background-color: #F39C12; /* Warm Orange or Gold */
   color: #000;
   transform: scale(1.05);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-/* Centered Logo */
-.logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-/* Logo Styling */
-.nav-logo {
-  width: 80px; /* Adjust size */
-  height: auto;
- }
-
-/* Responsive Navbar */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .nav-logo {
-    width: 60px; /* Smaller logo for mobile */
-  }
-}
-
-/* Navbar Styling */
-nav {
-  background: linear-gradient(to right, #2C3E50, #1ABC9C); /* Updated Gradient */
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 20px 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 100;
-  transition: all 0.3s ease-in-out;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Navbar Links */
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
+ /* Global Styles */
+* {
   margin: 0;
   padding: 0;
-  gap: 30px;
+  box-sizing: border-box;
 }
 
-nav ul li {
-  font-size: 18px;
-  font-weight: 600;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ECF0F1; /* Soft White or Light Gray */
+  color: #2C3E50; /* Dark Gray for text */
 }
 
-/* Navbar Link Styling */
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 50px;
-  font-size: 16px;
-  font-weight: 500;
-  transition: all 0.3s ease-in-out;
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
 }
 
-/* Hover Effect on Links */
-nav ul li a:hover {
-  background-color: #F39C12; /* Accent Color */
-  color: #000;
-  transform: scale(1.05);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive Navbar */
-@media (max-width: 768px) {
-  nav {
-    padding: 15px 0;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  nav ul li a {
-    font-size: 18px;
-    padding: 14px 25px;
-  }
-} 
-.hero-section {
-  width: 100%;
-  height: 100vh; /* Full-screen height */
-  background-image: url('assets/images/rr.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.hero-overlay {
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay for text visibility */
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-/* Navbar Scroll Effect */
-nav.scrolled {
-  background: linear-gradient(to right, #1ABC9C, #2C3E50);
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
-}
-.hero-section {
-  height: 50vh; /* Adjust as needed */
-  background-size: cover;
-  background-position: center;
-}
-
- 
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-}
-
-.hero p {
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-top: 10px;
-}
-
-.hero button {
-  margin-top: 20px;
-  padding: 12px 24px;
-  font-size: 18px;
-  font-weight: 600;
-  background-color: #F39C12;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.hero button:hover {
-  background-color: #D68910;
-}
-
-/* Mission & Vision Section */
-.mission-vision {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.mission-vision h2 {
-  font-size: 2.5rem;
-  color: #2C3E50;
-  font-weight: 700;
-}
-
-.mission-vision p {
-  font-size: 1.2rem;
-  color: #555;
-  margin-top: 10px;
-  line-height: 1.6;
-}
-
-/* Project Section */
-.project-box {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 30px;
-  background-color: white;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.project-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-.project-box h3 {
-  font-size: 1.8rem;
-  color: #2C3E50;
-}
-
-.project-box p {
-  color: #777;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* Testimonials */
-.testimonial-box {
-  background: #ECF0F1;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial-box p {
-  font-style: italic;
-  font-size: 1.1rem;
-  color: #333;
-}
-
-/* Footer Styling */
-footer {
-  background-color: #2C3E50;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.2);
-}
-
-footer a {
-  text-decoration: none;
-  color: #F39C12;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: #ffdd33;
-}
-
-/* About Section Styling */
-.about-section {
-  background-color: #f9fafb;
-  padding: 40px 20px;
-}
-
-.about-section h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #2C3E50;
-}
-
-.about-section p {
-  font-size: 1.2rem;
-  color: #555;
-  line-height: 1.6;
-  max-width: 900px;
-  margin: 20px auto;
-}
-
-.about-section .mission-vision {
+/* Header Styles */
+header {
+  background-color: #ECF0F1; /* Soft White or Light Gray */
+  color: #2C3E50; /* Dark Gray */
+  padding: 80px 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: right;
+  color: #F39C12; /* Accent Color - Warm Orange or Gold */
+}
+
+header .text-left h1,
+header .text-left p {
+  color: #F39C12; /* Warm Orange or Gold */
+}
+
+header .text-center p {
+  font-size: 1.25rem;
+  color: #2C3E50; /* Slightly darker color for contrast */
+}
+
+header .flex a {
+  transition: transform 0.3s ease-in-out;
+}
+
+header .flex a:hover {
+  transform: scale(1.1); /* Slightly enlarge icons on hover */
+}
+
+header .flex a svg {
+  color: #F39C12; /* Apply the Warm Orange or Gold color to icons */
+}
+
+header .flex a:hover svg {
+  color: #F39C12; /* Keep the hover effect on icons */
+}
+
+/* Social Media Icons */
+header .flex a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #F39C12;
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+header .flex a:hover {
+  color: #2C3E50; /* Dark Gray on hover for contrast */
+}
+
+header .flex a span {
+  font-size: 0.875rem;
+  margin-top: 5px;
+  color: #2C3E50; /* Darker text for the labels */
+}
+
+header .flex {
+  display: flex;
+  justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
-.about-section .mission-vision div {
-  background-color: white;
+/* Right Section - Riyoga Foundation Course */
+header .text-right {
+  text-align: right;
+}
+
+/* Main Content Styles */
+main {
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  width: 48%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.about-section .mission-vision div h3 {
-  font-size: 1.8rem;
-  color: #2C3E50;
+h1, h2, h3 {
+  color: #2C3E50; /* Dark Gray */
 }
 
-.about-section .mission-vision div p {
-  font-size: 1rem;
-  color: #777;
-}
-
-/* Button Styling */
-button {
-  background-color: #1ABC9C;
+/* Call to Action Styles */
+.cta-button {
+  background-color: #F39C12; /* Warm Orange or Gold */
   color: white;
   padding: 12px 24px;
-  border-radius: 30px;
-  border: none;
+  border-radius: 5px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
   cursor: pointer;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
-button:hover {
-  background-color: #16A085;
-}
-/* Hero Section Styles */
-.hero-section {
-  width: 100%;
-  height: 100vh; /* Full-screen height */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+.cta-button:hover {
+  background-color: #E67E22; /* Darker shade on hover */
+  transform: scale(1.05); /* Slight enlarge effect */
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Footer Styles */
+footer {
+  background-color: #2C3E50; /* Dark Gray for footer */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.bg-soft-gray {
+  background-color: #ECF0F1; /* Soft White or Light Gray */
+}
+
+.bg-accent {
+  background-color: #F39C12; /* Accent Color - Warm Orange or Gold */
+}
+
+.text-gray {
+  color: #2C3E50; /* Dark Gray for text */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .flex {
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+
+  header .title {
+    text-align: center;
+  }
 }
