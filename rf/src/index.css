@@ -1,14 +1,93 @@
+ /* Global Styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333; /* Set a default text color */
+  background-color: #ECF0F1; /* Soft White/Light Gray Background */
+  color: #333; /* Default text color */
+}
+/* Navbar Container */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #2C3E50, #1ABC9C); /* Modern Gradient */
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Navbar styling */
+/* Navbar Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Items */
+.nav-links li {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Navbar Links */
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+  background-color: rgba(255, 215, 0, 0.8);
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Centered Logo */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+/* Logo Styling */
+.nav-logo {
+  width: 80px; /* Adjust size */
+  height: auto;
+ }
+ 
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-logo {
+    width: 60px; /* Smaller logo for mobile */
+  }
+}
+
+/* Navbar Styling */
 nav {
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  background: linear-gradient(to right, #2C3E50, #1ABC9C); /* Updated Gradient */
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   padding: 20px 0;
   position: fixed;
@@ -19,7 +98,7 @@ nav {
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Navbar links container */
+/* Navbar Links */
 nav ul {
   display: flex;
   justify-content: center;
@@ -29,13 +108,12 @@ nav ul {
   gap: 30px;
 }
 
-/* Navbar list items */
 nav ul li {
   font-size: 18px;
   font-weight: 600;
 }
 
-/* Navbar link styling */
+/* Navbar Link Styling */
 nav ul li a {
   text-decoration: none;
   color: white;
@@ -46,15 +124,15 @@ nav ul li a {
   transition: all 0.3s ease-in-out;
 }
 
-/* Hover effect on links */
+/* Hover Effect on Links */
 nav ul li a:hover {
-  background-color: rgba(255, 215, 0, 0.8);
+  background-color: #F39C12; /* Accent Color */
   color: #000;
   transform: scale(1.05);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive design for smaller screens */
+/* Responsive Navbar */
 @media (max-width: 768px) {
   nav {
     padding: 15px 0;
@@ -72,80 +150,86 @@ nav ul li a:hover {
   }
 }
 
-/* Adding smooth transition for navbar when scrolling */
+/* Navbar Scroll Effect */
 nav.scrolled {
-  background: linear-gradient(to right, #2575fc, #6a11cb);
+  background: linear-gradient(to right, #1ABC9C, #2C3E50);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Styling for the content header */
-header {
-  margin-top: 80px;
+/* Hero Section */
+.hero {
   text-align: center;
-  padding: 60px 20px;
-  background-color: #ffffff;
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  border-radius: 10px; /* Rounded corners */
+  padding: 80px 20px;
+  background-color: #2C3E50;
+  color: white;
 }
 
-header h1 {
-  font-size: 3.5rem;
-  color: #333;
+.hero h1 {
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 20px;
 }
 
-header h2 {
-  font-size: 1.6rem;
-  color: #555;
+.hero p {
+  font-size: 1.5rem;
   font-weight: 400;
   margin-top: 10px;
 }
 
-/* Footer Styling */
-footer {
-  background-color: #333;
+.hero button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #F39C12;
   color: white;
-  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #D68910;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+  padding: 50px 20px;
   text-align: center;
-  box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.2);
 }
 
-footer a {
-  text-decoration: none;
-  color: #ffcc00;
-  font-weight: bold;
-  transition: color 0.3s ease;
+.mission-vision h2 {
+  font-size: 2.5rem;
+  color: #2C3E50;
+  font-weight: 700;
 }
 
-footer a:hover {
-  color: #ffdd33;
+.mission-vision p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.6;
 }
 
-/* Content Section Styling */
-.container {
-  padding: 30px;
-}
-
+/* Project Section */
 .project-box {
   border: 1px solid #ccc;
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 10px;
   padding: 20px;
   margin-bottom: 30px;
-  background-color: #fff;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Adding shadow for a floating effect */
+  background-color: white;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
 .project-box:hover {
-  transform: translateY(-5px); /* Hover effect to lift the box */
+  transform: translateY(-5px);
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .project-box h3 {
   font-size: 1.8rem;
-  color: #333;
-  margin-bottom: 15px;
+  color: #2C3E50;
 }
 
 .project-box p {
@@ -154,3 +238,36 @@ footer a:hover {
   line-height: 1.6;
 }
 
+/* Testimonials */
+.testimonial-box {
+  background: #ECF0F1;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-box p {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #2C3E50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.2);
+}
+
+footer a {
+  text-decoration: none;
+  color: #F39C12;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffdd33;
+}
