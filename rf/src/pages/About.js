@@ -6,8 +6,7 @@ export default function About() {
       {/* Hero Section */}
       <div
         className="hero-section"
-        style={{ backgroundImage: "url('assets/images/logo.jpg')" }}
-      >
+         >
         <div className="hero-overlay">
           <motion.h1
             initial={{ opacity: 0, y: -50 }}
