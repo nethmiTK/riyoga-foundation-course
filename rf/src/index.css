@@ -6,6 +6,7 @@ body {
   background-color: #ECF0F1; /* Soft White/Light Gray Background */
   color: #333; /* Default text color */
 }
+
 /* Navbar Container */
 nav {
   display: flex;
@@ -68,7 +69,7 @@ nav {
   width: 80px; /* Adjust size */
   height: auto;
  }
- 
+
 /* Responsive Navbar */
 @media (max-width: 768px) {
   nav {
@@ -270,4 +271,87 @@ footer a {
 
 footer a:hover {
   color: #ffdd33;
+}
+
+/* About Section Styling */
+.about-section {
+  background-color: #f9fafb;
+  padding: 40px 20px;
+}
+
+.about-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2C3E50;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.about-section .mission-vision {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.about-section .mission-vision div {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 48%;
+}
+
+.about-section .mission-vision div h3 {
+  font-size: 1.8rem;
+  color: #2C3E50;
+}
+
+.about-section .mission-vision div p {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Button Styling */
+button {
+  background-color: #1ABC9C;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #16A085;
+}
+/* Hero Section Styles */
+.hero-section {
+  width: 100%;
+  height: 100vh; /* Full-screen height */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

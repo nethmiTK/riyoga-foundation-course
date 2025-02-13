@@ -1,90 +1,86 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-function About() {
+export default function About() {
   return (
     <div className="bg-gray-100 min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-[#2C3E50] text-white text-center py-20">
-        <div className="container mx-auto px-6">
+      <div
+        className="hero-section"
+        style={{ backgroundImage: "url('assets/images/logo.jpg')" }}
+      >
+        <div className="hero-overlay">
           <motion.h1
-            className="text-4xl md:text-5xl font-bold"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.8 }}
+            className="text-white text-4xl md:text-5xl font-bold text-center"
           >
-            Empowering Communities, Transforming Lives
+            About Riyoga Foundation
           </motion.h1>
-          <p className="mt-4 text-lg text-gray-300">
-            Join us in making a difference through education, awareness, and action.
-          </p>
-          <motion.div
-            className="mt-6"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            <Link
-              to="/get-involved"
-              className="bg-[#F39C12] text-white px-6 py-3 rounded-full shadow-md hover:bg-[#e67e22] transition"
-            >
-              Get Involved
-            </Link>
-          </motion.div>
         </div>
-      </section>
+      </div>
 
-      {/* Thoughts Section */}
-      <section className="bg-[#1ABC9C] text-white py-10">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-semibold">Daily Thoughts</h2>
-          <p className="mt-4 text-lg italic">"The best way to find yourself is to lose yourself in the service of others."</p>
-          <button className="mt-4 bg-[#F39C12] px-4 py-2 rounded-full shadow-md hover:bg-[#e67e22] transition">
-            Skip
-          </button>
-        </div>
-      </section>
+      {/* About Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="max-w-4xl mx-auto text-center py-12 px-6 md:px-12"
+      >
+        <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+          The Riyoga Foundation is dedicated to promoting holistic wellness and 
+          sustainable community development through innovative projects and educational initiatives.
+        </p>
+      </motion.div>
 
       {/* Mission & Vision Section */}
-      <section className="py-16 px-6 md:px-12 text-center">
-        <h2 className="text-3xl font-semibold text-[#2C3E50]">Our Mission & Vision</h2>
-        <p className="mt-4 text-lg text-gray-600">
-          We aim to create a better world through education, awareness, and sustainability projects.
-        </p>
-      </section>
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-12">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all"
+        >
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Our Mission</h2>
+          <p className="text-gray-600 leading-relaxed">
+            To empower individuals and communities by fostering awareness, 
+            education, and opportunities for sustainable growth.
+          </p>
+        </motion.div>
 
-      {/* Testimonials / Success Stories */}
-      <section className="bg-gray-200 py-16">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-semibold text-[#2C3E50]">Success Stories</h2>
-          <div className="mt-8 flex flex-wrap justify-center gap-6">
-            <Testimonial
-              name="John Doe"
-              text="This foundation changed my life by providing access to education and skill development!"
-            />
-            <Testimonial
-              name="Jane Smith"
-              text="With the help of Riyoga Foundation, I was able to start my own small business."
-            />
-          </div>
-        </div>
-      </section>
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all"
+        >
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Our Vision</h2>
+          <p className="text-gray-600 leading-relaxed">
+            A world where holistic well-being and social responsibility 
+            drive positive change for future generations.
+          </p>
+        </motion.div>
+      </div>
+
+      {/* Call to Action */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="mt-16 text-center"
+      >
+        <h2 className="text-3xl font-bold text-gray-800">Join Us in Making a Difference</h2>
+        <p className="text-lg text-gray-600 mt-4">
+          Be a part of our mission to create a better tomorrow through innovation and compassion.
+        </p>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="mt-6 px-6 py-3 bg-blue-600 text-white text-lg font-medium rounded-full hover:bg-blue-700 transition-all"
+        >
+          Get Involved
+        </motion.button>
+      </motion.div>
     </div>
   );
 }
-
-// Testimonial Component
-const Testimonial = ({ name, text }) => (
-  <motion.div
-    className="bg-white p-6 rounded-lg shadow-lg max-w-sm"
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }}
-  >
-    <p className="text-gray-700">"{text}"</p>
-    <h3 className="mt-4 font-semibold text-[#1ABC9C]">{name}</h3>
-  </motion.div>
-);
-
-export default About;
