@@ -21,6 +21,14 @@ export default function About() {
         transition={{ duration: 1 }}
       ></motion.div>
 
+      {/* Footer Section */}
+      <div className="footer-section">
+        <p>© 2025 Riyoga Foundation. All rights reserved.</p>
+        <div className="footer-links">
+          <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </div>
+      </div>
+
       {/* Main Content */}
       <motion.div
         className="about-content"
