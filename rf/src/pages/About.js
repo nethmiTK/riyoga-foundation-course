@@ -28,8 +28,7 @@ export default function About() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="about-title">ABOUT US</h1>
-        <p className="about-text">
+         <p className="about-text">
           Welcome to <span className="highlight">Riyoga Foundation</span>! We are 
           dedicated to empowering communities and making a difference through innovation, 
           education, and social impact.
