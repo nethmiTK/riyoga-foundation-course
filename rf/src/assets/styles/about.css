@@ -1,50 +1,102 @@
-.about-container {
+/* Hero Section */
+.hero-section {
+    position: relative;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url("D:\riyoga-foundation\riyoga-foundation-course\rf\src\assets\images\m.jpg") no-repeat center center/cover;
-  }
-  
-  .content-box {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    max-width: 1200px;
-    background: white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
-    padding: 20px;
-    gap: 20px;
-  }
-  
-  .image-container {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .profile-image {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
+    text-align: center;
     overflow: hidden;
-    border: 4px solid gray;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
-  .profile-image img {
+  /* Background Image with Parallax Effect */
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.1); /* Slight zoom for parallax effect */
+    animation: parallaxMove 10s infinite alternate ease-in-out;
   }
   
-  .text-section {
-    text-align: center;
-    font-size: 2rem;
+  @keyframes parallaxMove {
+    from {
+      transform: scale(1.1) translateY(0);
+    }
+    to {
+      transform: scale(1.2) translateY(-20px);
+    }
+  }
+  
+  /* Animated Dark Overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1;
+  }
+  
+  /* Glassmorphism Effect */
+  .about-content {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    z-index: 2;
+    max-width: 600px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Title Styling */
+  .about-title {
+    font-size: 3rem;
     font-weight: bold;
-    color: #F39C12;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+  
+  /* Text Styling */
+  .about-text {
+    font-size: 1.2rem;
+    color: #f1f1f1;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  /* Highlighted Words */
+  .highlight {
+    color: #ffcc00;
+    font-weight: bold;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-title {
+      font-size: 2.2rem;
+    }
+  
+    .about-text {
+      font-size: 1rem;
+    }
   }
   

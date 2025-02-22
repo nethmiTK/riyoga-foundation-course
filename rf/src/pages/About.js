@@ -1,56 +1,40 @@
 import { motion } from "framer-motion";
-import logo2 from "../assets/images/main.jpeg"; // Image for the about section
 import "../assets/styles/about.css"; // Import CSS file
+import bgImage from "../assets/images/main.jpeg"; // Background image
 
 export default function About() {
   return (
-    <div className="about-container">
-      {/* Main Container */}
-      <div className="content-box">
-        
-        {/* Left Section - Image */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="image-container"
-        >
-          <div className="profile-image">
-            <img src={logo2} alt="Riyoga Foundation" />
-          </div>
-        </motion.div>
+    <div className="hero-section">
+      {/* Parallax Background Image */}
+      <div
+        className="background-image"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+        }}
+      ></div>
 
-        {/* Middle Section - "Hi" */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-section"
-        >
-          <h2>Hi</h2>
-        </motion.div>
+      {/* Overlay Animation */}
+      <motion.div
+        className="overlay"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.5 }}
+        transition={{ duration: 1 }}
+      ></motion.div>
 
-        {/* Right Section - "Welcome" */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="text-section"
-        >
-          <h2>Welcome</h2>
-        </motion.div>
-
-        {/* New Section - "Riyoga Foundation" */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="text-section"
-        >
-          <h2>Riyoga Foundation</h2>
-        </motion.div>
-
-      </div>
+      {/* Main Content */}
+      <motion.div
+        className="about-content"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <h1 className="about-title">ABOUT US</h1>
+        <p className="about-text">
+          Welcome to <span className="highlight">Riyoga Foundation</span>! We are 
+          dedicated to empowering communities and making a difference through innovation, 
+          education, and social impact.
+        </p>
+      </motion.div>
     </div>
   );
 }
