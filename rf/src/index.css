@@ -1,3 +1,9 @@
+
+ 
+body {
+  background-color:  #aaccef!important; /* Dark Blue */
+}
+
 nav {
   padding: 22px 0;
   height: 1px; /* Adjusted height for better navbar appearance */
@@ -68,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Header Styles */
 header {
-  background-color: #ECF0F1; /* Soft White or Light Gray */
+  background: #aaccef; /* Deep Blue (Primary Color) */
   color: #2C3E50; /* Dark Gray */
   padding: 80px 40px;
   display: flex;
@@ -235,4 +241,5 @@ footer p {
   header .title {
     text-align: center;
   }
+  
 }
