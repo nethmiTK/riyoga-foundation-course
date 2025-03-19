@@ -1,12 +1,4 @@
-/* About Us Section */
-.about-us-section {
-    background-image: url('D:\riyoga-foundation\riyoga-foundation-course\rf\src\assets\images\main.jpeg');
-    background-size: cover;
-    padding: 50px;
-    color: white;
-    text-align: center;
-  }
-  
+ 
   .about-us-content {
     max-width: 800px;
     margin: 0 auto;

@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <nav>
       <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
+        <li><Link to="/">Who We Are</Link></li>
         <li><Link to="/projects">Projects</Link></li>
 
         {/* Centered Logo */}

@@ -6,7 +6,7 @@ function Header() {
     <header className="title bg-[#0a1930] p-4 text-white">
       {/* Left Section - Title */}
       <div className="text-left">
-        <h1 className="text-2xl font-bold">Welcome to the Riyoga Nursing School</h1>
+        <h1 className="text-2xl font-bold">Welcome to the Ryuga Lanka Foundation</h1>
       </div>
 
       {/* Center Section - Social Media */}

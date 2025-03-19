@@ -1,11 +1,45 @@
 import { motion } from "framer-motion";
-import "../assets/styles/about.css"; // Import CSS file
-import bgImage from "../assets/images/main.jpeg"; // Background image
+import "../assets/styles/about.css"; // CSS
+import bgImage from "../assets/styles/main.jpg"; // ✅ Correct import for JS/React
+import ajanthaImage from "../assets/images/tk.jpg"; // Example of local image import
 
 export default function About() {
+  const boardMembers = [
+    {
+      name: "Mr.Ajantha Mahesh",
+      position: "Chairman",
+      image: ajanthaImage, // Use the imported image here
+    },
+    {
+      name: "Ms.Nethmi Thalikoralage",
+      position: "Secretary",
+      image: "https://via.placeholder.com/150",
+    },
+    {
+      name: "Mr.K.A.Upali",
+      position: "Treasurer",
+      image: "https://via.placeholder.com/150",
+    },
+    {
+      name: "Mr. K.K.vini sumanasiri",
+      position: "Vice President",
+      image: "https://via.placeholder.com/150",
+    },
+    {
+      name: "Mr. Chinthaka Edirisinghe",
+      position: "Vice President",
+      image: "https://via.placeholder.com/150",
+    },
+    {
+      name: "Ms. mahesh wikramanayaka",
+      position: "Deputy Secretary",
+      image: "https://via.placeholder.com/150",
+    },
+  ];
+
   return (
     <div className="hero-section">
-      {/* Parallax Background Image */}
+      {/* Background Image */}
       <div
         className="background-image"
         style={{
@@ -21,14 +55,6 @@ export default function About() {
         transition={{ duration: 1 }}
       ></motion.div>
 
-      {/* Footer Section */}
-      <div className="footer-section">
-        <p>© 2025 Riyoga Foundation. All rights reserved.</p>
-        <div className="footer-links">
-          <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-        </div>
-      </div>
-
       {/* Main Content */}
       <motion.div
         className="about-content"
@@ -36,12 +62,55 @@ export default function About() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
       >
-         <p className="about-text">
-          Welcome to <span className="highlight">Riyoga Foundation</span>! We are 
-          dedicated to empowering communities and making a difference through innovation, 
-          education, and social impact.
-        </p>
+        {/* Content */}
       </motion.div>
+
+      {/* ABOUT US SECTION */}
+      <section className="about-us-section">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <h2 className="about-us-title"></h2>
+          <p className="about-us-description">
+            The <span className="highlight">Riyoga Foundation</span> <span>"For those of you who seek strength"</span> focuses on
+            holistic development by promoting education, health, and social
+            well-being. Our mission is to create sustainable solutions and
+            empower individuals to lead healthier, more fulfilling lives.
+          </p>
+        </motion.div>
+      </section>
+
+      {/* Board Members Section */}
+      <motion.div
+        className="board-section"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <h2 className="board-title">Our Board Members</h2>
+        <div className="board-members-container">
+          {boardMembers.map((member, index) => (
+            <motion.div
+              className="board-member-card"
+              key={index}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <img
+                src={member.image}
+                alt={member.name}
+                className="member-image"
+              />
+              <h3 className="member-name">{member.name}</h3>
+              <p className="member-position">{member.position}</p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+
+    
     </div>
   );
 }

@@ -1,102 +1,158 @@
-/* Hero Section */
-.hero-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
+/* About Us Section */
+.about-us-section {
+  background-image: url('../styles/main.jpg'); /* ✅ Correct relative path for CSS */
+  background-size: cover;
+  background-position: center;
+  padding: 100px 80px;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.about-us-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay */
+  z-index: -1;
+}
+
+.about-us-title {
+  font-size: 3rem;
+  color: #ffcc00;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.about-us-description {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #f1f1f1;
+}
+
+.highlight {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.board-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, rgba(10, 25, 47, 0.9), rgba(0, 0, 0, 0.9));
+  position: relative;
+  z-index: 2;
+}
+
+/* Board Section Title */
+.board-title {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #ffcc00;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  position: relative;
+}
+
+.board-title::after {
+  content: "";
+  display: block;
+  margin: 10px auto 0;
+  width: 80px;
+  height: 4px;
+  background: #ffcc00;
+  border-radius: 2px;
+}
+
+/* Container for Member Cards */
+.board-members-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Individual Member Card */
+.board-member-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 25px;
+  width: 250px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.board-member-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* Member Image Styling */
+.member-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 4px solid #ffcc00;
+  transition: transform 0.4s ease;
+}
+
+.board-member-card:hover .member-image {
+  transform: rotate(5deg) scale(1.05);
+}
+
+/* Member Name */
+.member-name {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Member Position */
+.member-position {
+  font-size: 1rem;
+  color: #dddddd;
+  font-style: italic;
+}
+
+/* Subtle Fade-in Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  /* Background Image with Parallax Effect */
-  .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    transform: scale(1.1); /* Slight zoom for parallax effect */
-    animation: parallaxMove 10s infinite alternate ease-in-out;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  @keyframes parallaxMove {
-    from {
-      transform: scale(1.1) translateY(0);
-    }
-    to {
-      transform: scale(1.2) translateY(-20px);
-    }
+}
+
+.board-member-card {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .board-members-container {
+    gap: 20px;
   }
-  
-  /* Animated Dark Overlay */
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
-    z-index: 1;
+
+  .board-member-card {
+    width: 80%;
   }
-  
-  /* Glassmorphism Effect */
-  .about-content {
-    background: rgba(255, 255, 255, 0.15);
-    padding: 30px;
-    border-radius: 15px;
-    backdrop-filter: blur(15px);
-    z-index: 2;
-    max-width: 600px;
-    animation: fadeIn 1.5s ease-in-out;
+
+  .board-title {
+    font-size: 2rem;
   }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Title Styling */
-  .about-title {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-  }
-  
-  /* Text Styling */
-  .about-text {
-    font-size: 1.2rem;
-    color: #f1f1f1;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  /* Highlighted Words */
-  .highlight {
-    color: #ffcc00;
-    font-weight: bold;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .about-title {
-      font-size: 2.2rem;
-    }
-  
-    .about-text {
-      font-size: 1rem;
-    }
-  }
-  
+}
